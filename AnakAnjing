@@ -1,0 +1,31 @@
+public class AnakAnjing {
+    int usiaAnakAnjing;
+
+    public AnakAnjing(String nama) {
+        // Konstruktor dengan parameter "nama"
+        System.out.println("Nama yang dipilih adalah: " + nama);
+    }
+
+    public void setUsia(int usia) {
+        usiaAnakAnjing = usia;
+    }
+
+    public int getUsia() {
+        System.out.println("Usia anak anjing adalah: " + usiaAnakAnjing);
+        return usiaAnakAnjing;
+    }
+
+    public static void main(String[] args) {
+        // Membuat objek baru
+        AnakAnjing anjingSaya = new AnakAnjing("Tommy");
+
+        // Memanggil method untuk mengatur usia anak anjing
+        anjingSaya.setUsia(2);
+
+        // Memanggil method untuk mendapatkan usia anak anjing
+        anjingSaya.getUsia();
+
+        // Mengakses variabel secara langsung
+        System.out.println("Nilai Variabel: " + anjingSaya.usiaAnakAnjing);
+    }
+}
