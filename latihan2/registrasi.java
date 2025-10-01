@@ -83,7 +83,7 @@ public class registrasi extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("ke menu");
+        jButton3.setText("kembali ke menu");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -100,18 +100,18 @@ public class registrasi extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtUsername2, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                    .addComponent(txtPassword2)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addComponent(txtUsername2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPassword2, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)))
                 .addContainerGap(99, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
-                .addGap(142, 142, 142))
+                .addGap(118, 118, 118))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,8 +129,8 @@ public class registrasi extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         pack();
@@ -162,7 +162,7 @@ public class registrasi extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_jButton3ActionPerformed
     ////////////////////////////////////////////////////////////
-    private void clearrAction() {
+        private void clearrAction() {
     txtUsername2.setText("");
     txtPassword2.setText("");
     }
@@ -181,7 +181,7 @@ public class registrasi extends javax.swing.JFrame {
         PreparedStatement cekStmt = conn.prepareStatement(cekQuery);
         cekStmt.setString(1, username);
         cekStmt.setString(2, password);
-        ResultSet rs = cekStmt.executeQuery();
+        ResultSet rs = (ResultSet) cekStmt.executeQuery();
 
         if (rs.next()) {
             JOptionPane.showMessageDialog(this, "Akun sudah terdaftar dengan username dan password yang sama!");
@@ -204,7 +204,6 @@ public class registrasi extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Error saat registrasi: " + e.getMessage());
     }
 }
-
     /**
      * @param args the command line arguments
      */
