@@ -37,9 +37,10 @@ INSERT INTO users (username, password) VALUES
 ('rafi', 'react123'),
 ('salsa', 'uiux2025'),
 ('omar', 'java456'),
-('lutfy', 'php2025'),
+('lutfy', 'php2026'),
 ('kevin', 'sqlmaster'),
 ('ayu', 'frontend');
 
 -- Tampilkan semua data
 SELECT * FROM users;
+
